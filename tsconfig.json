@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "rootDir": ".",
+    "outDir": "dist",
+    "lib": ["ES2022", "dom"],
+    "types": ["node", "jest"],
+    "noImplicitAny": true,
+    "strict": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@stellaraf/cacheutil-*": ["packages/*"]
+    }
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  },
+  "include": ["packages/*/**/src/*.ts"],
+  "exclude": ["node_modules", "dist", "src/**/*.spec.ts", "jest.config.ts", "build.ts"]
+}

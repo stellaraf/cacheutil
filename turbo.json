@@ -1,0 +1,25 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["tsconfig.json", "package.json"],
+  "pipeline": {
+    "format": {
+      "outputs": []
+    },
+    "typecheck": {
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      "dependsOn": ["typecheck", "format"],
+      "outputs": []
+    },
+    "build": {
+      "dependsOn": ["typecheck", "format", "lint"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "inputs": ["src/**/*.ts"]
+    }
+  }
+}

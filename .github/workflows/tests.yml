@@ -1,0 +1,21 @@
+name: Tests
+on: [push, pull_request]
+
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install -g pnpm
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm run lint
+      - name: TypeScript
+        run: pnpm run typecheck
+      - name: Jest
+        run: pnpm run test
