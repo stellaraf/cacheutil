@@ -1,7 +1,5 @@
 name: Publish to NPM
-on:
-  release:
-    types: [published]
+on: create
 
 jobs:
   publish:
@@ -24,5 +22,13 @@ jobs:
       - name: Prepare
         run: pnpm build
 
-      - name: Publish to NPM
-        run: pnpm -r publish --no-git-checks
+      - name: Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+          setupGitUser: false
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
