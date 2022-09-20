@@ -1,5 +1,5 @@
 import { createClient } from "redis";
-import { Cache } from "@stellaraf/cacheutil-core";
+import { Cache, CacheConnectionError } from "@stellaraf/cacheutil-core";
 
 import type { RedisClientOptions } from "redis";
 import type { SetOptions } from "@stellaraf/cacheutil-core";
@@ -21,8 +21,23 @@ export class RedisCache extends Cache<RedisClient> {
   }
 
   async #open(): Promise<void> {
-    if (!this.backend.isOpen) {
-      await this.backend.connect();
+    try {
+      if (!this.backend.isOpen) {
+        await this.backend.connect();
+      }
+      await this.backend.ping();
+    } catch (err) {
+      if (err instanceof Error) {
+        const error = new CacheConnectionError(err.message);
+        if (err.stack) {
+          error.stack = err.stack;
+        }
+        if (err.cause) {
+          error.cause = err.cause;
+        }
+        throw error;
+      }
+      throw new CacheConnectionError(String(err));
     }
   }
 

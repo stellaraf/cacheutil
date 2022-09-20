@@ -1,4 +1,14 @@
+import { CacheConnectionError } from "@stellaraf/cacheutil-core";
+
 import { RedisCache } from "./redis-cache";
+
+test("throws a connection error when appropriate", () => {
+  const cache = new RedisCache({ url: "redis://localhost:9736", database: 1 });
+  expect(async () => {
+    await cache.get("testkey");
+  }).rejects.toThrowError(CacheConnectionError);
+});
+
 describe("redis cache tests", () => {
   const cache = new RedisCache({ url: "redis://localhost:6379", database: 1 });
 
@@ -20,7 +30,7 @@ describe("redis cache tests", () => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
     const value = await cache.get("testkey");
     expect(value).toBeNull();
-  });
+  }, 3000);
 
   test("expire key date", async () => {
     const expireAt = new Date(Date.now());
@@ -29,7 +39,7 @@ describe("redis cache tests", () => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
     const value = await cache.get("testkey");
     expect(value).toBeNull();
-  });
+  }, 3000);
 
   test("all keys", async () => {
     await cache.backend.connect();
