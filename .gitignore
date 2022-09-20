@@ -1,6 +1,7 @@
 # Project
 .vscode
 .turbo
+*.rdb
 
 # dependencies
 node_modules
