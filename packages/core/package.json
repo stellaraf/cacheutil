@@ -2,7 +2,9 @@
   "name": "@stellaraf/cacheutil-core",
   "version": "1.0.0",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "license": "BSD-3-Clause",
   "files": [
     "dist/**/*"

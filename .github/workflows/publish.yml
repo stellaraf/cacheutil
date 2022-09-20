@@ -1,5 +1,10 @@
 name: Publish to NPM
-on: create
+on:
+  workflow_run:
+    workflows: ['Tests']
+    branches: [main]
+    types:
+      - completed
 
 jobs:
   publish:
