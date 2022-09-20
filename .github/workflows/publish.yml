@@ -10,9 +10,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          registry-url: 'https://registry.npmjs.org:_authToken=${NPM_TOKEN}'
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - uses: pnpm/action-setup@v2.2.2
         with:
@@ -26,7 +23,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm release
+          publish: pnpm -r publish --no-git-checks
           setupGitUser: false
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
