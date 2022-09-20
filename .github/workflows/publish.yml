@@ -12,13 +12,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
           registry-url: 'https://npm.pkg.github.com'
 
-      - run: npm install -g pnpm
-
-      - name: Install Dependencies
-        run: pnpm install
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: latest
+          run_install: true
 
       - name: Prepare
         run: pnpm build
