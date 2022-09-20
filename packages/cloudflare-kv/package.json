@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
-    "@stellaraf/eslint-config": "^1.1.2",
+    "@stellaraf/eslint-config": "^1.1.4",
     "@stellaraf/jest": "^1.0.0",
     "@types/jest": "^29.0.2",
     "@types/node": "^18.7.18",
@@ -43,9 +43,7 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@stellaraf",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
+      "@stellaraf"
     ]
   },
   "prettier": {
