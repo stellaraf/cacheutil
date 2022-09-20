@@ -3,14 +3,14 @@ import { CacheConnectionError } from "@stellaraf/cacheutil-core";
 import { RedisCache } from "./redis-cache";
 
 test("throws a connection error when appropriate", () => {
-  const cache = new RedisCache({ url: "redis://localhost:9736", database: 1 });
+  const cache = new RedisCache({ url: "redis://127.0.0.1:9736", database: 1 });
   expect(async () => {
     await cache.get("testkey");
   }).rejects.toThrowError(CacheConnectionError);
 });
 
 describe("redis cache tests", () => {
-  const cache = new RedisCache({ url: "redis://localhost:6379", database: 1 });
+  const cache = new RedisCache({ url: "redis://127.0.0.1:6379", database: 1 });
 
   test("put key", async () => {
     await cache.set("testkey", "testvalue");

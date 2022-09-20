@@ -5,19 +5,14 @@ jobs:
   tests:
     name: Tests
     runs-on: ubuntu-latest
-    services:
-      redis:
-        image: redis
-        options: >-
-          --health-cmd "redis-cli ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - uses: supercharge/redis-github-action@1.4.0
+        with:
+          redis-version: 6
       - run: npm install -g pnpm
       - name: Install Dependencies
         run: pnpm install
