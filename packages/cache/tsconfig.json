@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.json",
   "include": ["src/**/*.ts"],
-  "compilerOptions": { "rootDir": "src", "outDir": "dist", "composite": true },
+  "compilerOptions": { "rootDir": "src", "outDir": "dist" },
   "references": [{ "path": "../core" }, { "path": "../cloudflare-kv" }, { "path": "../redis" }]
 }

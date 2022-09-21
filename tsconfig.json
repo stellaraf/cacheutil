@@ -14,7 +14,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "baseUrl": "./",
-    "composite": true,
+    "declaration": true,
     "emitDeclarationOnly": true,
     "paths": {
       "@stellaraf/cacheutil-*": ["packages/*"]
@@ -24,13 +24,5 @@
     "transpileOnly": true,
     "files": true
   },
-  "include": ["packages/*/**/src/*.ts"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts",
-    "jest.config.ts",
-    "build.ts"
-  ]
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts", "jest.config.ts", "build.ts"]
 }

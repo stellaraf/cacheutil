@@ -1,5 +1,4 @@
 import { CacheConnectionError } from "@stellaraf/cacheutil-core";
-
 import { RedisCache } from "./redis-cache";
 
 test("throws a connection error when appropriate", () => {

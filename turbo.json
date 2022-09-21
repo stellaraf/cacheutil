@@ -16,6 +16,18 @@
       "dependsOn": ["^build", "typecheck", "format", "lint"],
       "outputs": ["dist/**"]
     },
+    "@stellaraf/cacheutil-redis#build": {
+      "dependsOn": ["@stellaraf/cacheutil-core#build"],
+      "outputs": ["dist/**"]
+    },
+    "@stellaraf/cacheutil-cloudflare-kv#build": {
+      "dependsOn": ["@stellaraf/cacheutil-core#build"],
+      "outputs": ["dist/**"]
+    },
+    "@stellaraf/cacheutil-cache#build": {
+      "dependsOn": ["@stellaraf/cacheutil-redis#build", "@stellaraf/cacheutil-cloudflare-kv#build"],
+      "outputs": ["dist/**"]
+    },
     "test": {
       "dependsOn": ["build"],
       "inputs": ["src/**/*.ts"]

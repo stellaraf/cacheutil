@@ -1,1 +1,1 @@
-export { jestConfig as default } from "@stellaraf/jest";
+export { base as default } from "@stellaraf/jest";

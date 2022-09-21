@@ -6,7 +6,6 @@ export interface SetOptions {
 export interface CacheType<Backend> {
   readonly backend: Backend;
 
-  // get<Value = unknown>(key: string): Promise<Value | null>;
   get(key: string): Promise<unknown | null>;
 
   set(key: string, value: unknown, options?: Partial<SetOptions>): Promise<void>;
@@ -23,7 +22,6 @@ export abstract class Cache<Backend> implements CacheType<Backend> {
     this.backend = backend;
   }
 
-  // abstract get<Value = unknown>(key: string): Promise<Value | null>;
   abstract get(key: string): Promise<unknown | null>;
 
   abstract set(key: string, value: unknown, options?: Partial<SetOptions>): Promise<void>;
