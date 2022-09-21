@@ -13,7 +13,7 @@ function isKVNamespace(obj: unknown): obj is CloudflareKVNamespace {
 }
 
 function isRedisOptions(obj: unknown): obj is RedisCacheOptions {
-  return objectIsTypeByProp<RedisCacheOptions>(obj, "url", "database");
+  return objectIsTypeByProp<RedisCacheOptions>(obj, "host", "db");
 }
 
 export function createCache(backend: CloudflareKVNamespace): InstanceType<typeof CloudflareKVCache>;
