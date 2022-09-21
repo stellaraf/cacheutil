@@ -6,9 +6,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "private": true,
   "dependencies": {
     "@changesets/cli": "^2.24.4",
     "@stellaraf/eslint-config": "^1.1.4",
