@@ -76,7 +76,6 @@ importers:
       typescript: ^4.8.2
     dependencies:
       '@stellaraf/cacheutil-core': link:../core
-      esbuild-jest: 0.5.0_esbuild@0.15.8
     devDependencies:
       '@cloudflare/workers-types': 3.16.0
       '@stellaraf/eslint-config': 1.1.4_prdxvwpqz7ols7qpi4wzmubrfu
@@ -84,6 +83,7 @@ importers:
       '@types/jest': 29.0.3
       '@types/node': 18.7.18
       esbuild: 0.15.8
+      esbuild-jest: 0.5.0_esbuild@0.15.8
       eslint: 8.23.1
       jest: 29.0.3_sgupjgtkb76w4hsvieap2xky7i
       jest-environment-miniflare: 2.9.0_jest@29.0.3
