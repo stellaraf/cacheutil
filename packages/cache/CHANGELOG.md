@@ -1,5 +1,11 @@
 # @stellaraf/cacheutil-cache
 
+## 2.1.0
+
+### Minor Changes
+
+- 6491157: Rework type exports
+
 ## 2.0.0
 
 ### Major Changes
