@@ -4,26 +4,23 @@ import { objectIsTypeByProp } from "@stellaraf/utilities";
 
 import type { CloudflareKVNamespace } from "@stellaraf/cacheutil-cloudflare-kv";
 
-export type CacheName = "cloudflare-kv" | "redis";
+export type BackendName = "cloudflare-kv" | "redis";
 
-export type Cache = InstanceType<typeof RedisCache> | InstanceType<typeof CloudflareKVCache>;
+export type Backend = InstanceType<typeof RedisCache> | InstanceType<typeof CloudflareKVCache>;
 
-export type CacheInit = CloudflareKVNamespace | RedisCacheOptions;
-
-export type { CloudflareKVNamespace } from "@stellaraf/cacheutil-cloudflare-kv";
-export type { RedisCacheOptions } from "@stellaraf/cacheutil-redis";
-
-export function isKVNamespace(obj: unknown): obj is CloudflareKVNamespace {
+function isKVNamespace(obj: unknown): obj is CloudflareKVNamespace {
   return objectIsTypeByProp<CloudflareKVNamespace>(obj, "get", "put", "delete");
 }
 
-export function isRedisOptions(obj: unknown): obj is RedisCacheOptions {
+function isRedisOptions(obj: unknown): obj is RedisCacheOptions {
   return objectIsTypeByProp<RedisCacheOptions>(obj, "host", "db");
 }
 
 export function createCache(backend: CloudflareKVNamespace): InstanceType<typeof CloudflareKVCache>;
 export function createCache(options: RedisCacheOptions): InstanceType<typeof RedisCache>;
-export function createCache(backendOrOptions: CacheInit): Cache {
+export function createCache(
+  backendOrOptions: CloudflareKVNamespace | RedisCacheOptions,
+): InstanceType<typeof CloudflareKVCache> | InstanceType<typeof RedisCache> {
   if (isKVNamespace(backendOrOptions)) {
     return new CloudflareKVCache(backendOrOptions);
   }
