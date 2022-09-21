@@ -1,5 +1,11 @@
 # @stellaraf/cacheutil-cache
 
+## 2.2.0
+
+### Minor Changes
+
+- 7a40adf: Fix git fiasco
+
 ## 2.0.0
 
 ### Major Changes
