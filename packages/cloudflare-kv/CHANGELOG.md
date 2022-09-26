@@ -1,5 +1,11 @@
 # @stellaraf/cacheutil-cloudflare-kv
 
+## 2.1.0
+
+### Minor Changes
+
+- 5d6fa6b: Fix Cloudflare Workers type export
+
 ## 2.0.0
 
 ### Major Changes
