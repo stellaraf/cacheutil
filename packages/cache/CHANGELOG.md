@@ -1,5 +1,16 @@
 # @stellaraf/cacheutil-cache
 
+## 2.3.0
+
+### Minor Changes
+
+- 5d6fa6b: Fix Cloudflare Workers type export
+
+### Patch Changes
+
+- Updated dependencies [5d6fa6b]
+  - @stellaraf/cacheutil-cloudflare-kv@2.1.0
+
 ## 2.2.0
 
 ### Minor Changes
