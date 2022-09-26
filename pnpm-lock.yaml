@@ -65,6 +65,7 @@ importers:
       '@stellaraf/jest': ^2.0.0
       '@types/jest': ^29.0.2
       '@types/node': ^18.7.18
+      cloudflare-workers-types-esm: 3.16.0-actual
       esbuild: ^0.15.8
       esbuild-jest: ^0.5.0
       eslint: ^8.23.1
@@ -82,6 +83,7 @@ importers:
       '@stellaraf/jest': 2.0.0_fncwvucs2gikxeehwd4accr46m
       '@types/jest': 29.0.3
       '@types/node': 18.7.18
+      cloudflare-workers-types-esm: 3.16.0-actual
       esbuild: 0.15.8
       esbuild-jest: 0.5.0_esbuild@0.15.8
       eslint: 8.23.1
@@ -2037,6 +2039,10 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
     dev: false
+
+  /cloudflare-workers-types-esm/3.16.0-actual:
+    resolution: {integrity: sha512-ffMDCu3hgLDrEpRemOjs9c0UQCxcstXRsSrVwCatku+QoU6n6rxoJ5NsBlLCYop1Rd5BQz7EEUs0G2NFi2iSQA==}
+    dev: true
 
   /cluster-key-slot/1.1.0:
     resolution: {integrity: sha512-2Nii8p3RwAPiFwsnZvukotvow2rIHM+yQ6ZcBXGHdniadkYGZYiGmkHJIbZPIV9nfv7m/U1IPMVVcAhoWFeklw==}
