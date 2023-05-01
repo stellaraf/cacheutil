@@ -4,7 +4,7 @@ export default monorepoConfig("@stellaraf/cacheutil-", undefined, {
   testEnvironment: "miniflare",
   testEnvironmentOptions: {
     kvNamespaces: ["TEST_KV"],
-    scriptPath: "dist/index.mjs",
+    scriptPath: "dist/esm/index.js",
     modules: true,
   },
 });
