@@ -6,18 +6,19 @@ import type { Format, BuildOptions } from "esbuild";
 
 const entryPoints = fs
   .readdirSync("src")
-  .filter((f) => !f.endsWith(".spec.ts"))
+  .filter((f) => !f.endsWith(".test.ts"))
   .map((f) => path.resolve("src", f));
 
 async function build(format: Exclude<Format, "iife">): Promise<void> {
-  const outExtension = format === "cjs" ? { ".js": ".cjs" } : { ".js": ".mjs" };
+  const outdir = `dist/${format}`;
   const options: BuildOptions = {
     target: ["esnext"],
     format,
     platform: "node",
     entryPoints,
-    outExtension,
-    outdir: "dist",
+    outdir,
+    treeShaking: true,
+    sourcemap: "inline",
   };
   const result = await esbuild.build(options);
   for (const error of result.errors) {

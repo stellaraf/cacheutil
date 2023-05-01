@@ -11,7 +11,7 @@
   <br/>
 </div>
 
-`@stellaraf/cacheutil` provides a consistent caching API with support for multiple backends, in the event that a library requires a cache but could be used on multiple platforms with different caching systems available. For example, if one needed use a library on both Cloudflare Workers and a standard NodeJS application.
+`@stellaraf/cacheutil` provides a consistent caching API with support for multiple backends, in the event that a library requires a cache but could be used on multiple platforms with different caching systems available. For example, if one needed to use a library on both Cloudflare Workers and a standard NodeJS application.
 
 # Supported Backends
 

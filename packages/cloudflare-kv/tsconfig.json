@@ -3,7 +3,7 @@
   "include": ["src/**/*.ts", "test-bindings.d.ts"],
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist",
+    "outDir": "./dist/types",
     "composite": true,
     "types": ["@cloudflare/workers-types", "node", "jest"]
   },
