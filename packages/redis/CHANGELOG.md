@@ -1,5 +1,13 @@
 # @stellaraf/cacheutil-redis
 
+## 2.0.2
+
+### Patch Changes
+
+- 06cabe5: Restructured packaging
+- Updated dependencies [06cabe5]
+  - @stellaraf/cacheutil-core@2.0.2
+
 ## 2.0.0
 
 ### Major Changes

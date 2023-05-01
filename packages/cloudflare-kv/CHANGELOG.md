@@ -1,5 +1,13 @@
 # @stellaraf/cacheutil-cloudflare-kv
 
+## 2.1.2
+
+### Patch Changes
+
+- 06cabe5: Restructured packaging
+- Updated dependencies [06cabe5]
+  - @stellaraf/cacheutil-core@2.0.2
+
 ## 2.1.0
 
 ### Minor Changes
