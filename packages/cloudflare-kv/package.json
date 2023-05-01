@@ -30,12 +30,11 @@
     "@stellaraf/cacheutil-core": "*"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.16.0",
+    "@cloudflare/workers-types": "^4.20230404.0",
     "@stellaraf/eslint-config": "^1.1.4",
     "@stellaraf/jest": "^2.0.0",
     "@types/jest": "^29.0.2",
     "@types/node": "^18.7.18",
-    "cloudflare-workers-types-esm": "3.16.0-actual",
     "esbuild": "^0.15.8",
     "esbuild-jest": "^0.5.0",
     "eslint": "^8.23.1",

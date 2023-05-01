@@ -1,6 +1,12 @@
 import { CloudflareKVCache } from "./cloudflare-kv";
 
+import type { KVNamespace } from "@cloudflare/workers-types";
+
 declare global {
+  interface Bindings {
+    TEST_KV: KVNamespace;
+  }
+
   function getMiniflareBindings(): Bindings;
 }
 

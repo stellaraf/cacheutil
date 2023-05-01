@@ -1,6 +1,6 @@
 import { Cache } from "@stellaraf/cacheutil-core";
 
-import type { KVNamespace } from "cloudflare-workers-types-esm";
+import type { KVNamespace } from "@cloudflare/workers-types";
 import type { SetOptions } from "@stellaraf/cacheutil-core";
 
 export type CloudflareKVNamespace = KVNamespace<string>;
