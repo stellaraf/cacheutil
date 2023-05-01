@@ -1,8 +1,6 @@
-import { CloudflareKVCache } from "@stellaraf/cacheutil-cloudflare-kv";
-import { RedisCache, RedisCacheOptions } from "@stellaraf/cacheutil-redis";
+import { CloudflareKVCache, type CloudflareKVNamespace } from "@stellaraf/cacheutil-cloudflare-kv";
+import { RedisCache, type RedisCacheOptions } from "@stellaraf/cacheutil-redis";
 import { objectIsTypeByProp } from "@stellaraf/utilities";
-
-import type { CloudflareKVNamespace } from "@stellaraf/cacheutil-cloudflare-kv";
 
 export type CacheName = "cloudflare-kv" | "redis";
 
