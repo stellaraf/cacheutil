@@ -2,7 +2,7 @@ name: Quality
 on: [push, pull_request]
 
 jobs:
-  tests:
+  quality:
     name: Quality
     runs-on: ubuntu-latest
     steps:
@@ -15,6 +15,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 19
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
 
       - name: Lint
         run: pnpm run lint
