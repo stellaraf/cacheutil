@@ -34,16 +34,16 @@
     "esbuild-jest": "^0.5.0"
   },
   "devDependencies": {
-    "@stellaraf/eslint-config": "^1.1.4",
-    "@stellaraf/jest": "^2.0.0",
+    "@stellaraf/eslint-config": "^1.1.6",
+    "@stellaraf/jest": "^2.0.3",
     "@types/jest": "^29.0.2",
     "@types/node": "^18.7.18",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
-    "esbuild": "^0.15.8",
-    "eslint": "^8.23.1",
-    "jest": "^29.0.3",
-    "prettier": "^2.7.1",
+    "esbuild": "^0.17.18",
+    "eslint": "^8.39.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
