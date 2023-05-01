@@ -1,5 +1,11 @@
 # @stellaraf/cacheutil-core
 
+## 2.0.2
+
+### Patch Changes
+
+- 06cabe5: Restructured packaging
+
 ## 2.0.0
 
 ### Major Changes
