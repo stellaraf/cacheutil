@@ -4,14 +4,14 @@
   <br/>
   <h3>Stellar JS Cache Utilities</h3>
   <br/>
-  <a href="https://github.com/stellaraf/cacheutil/actions?query=workflow%3AQuality">
-    <img src="https://img.shields.io/github/workflow/status/stellaraf/cacheutil/Quality?color=%239100fa&event=push&style=for-the-badge" />
+  <a href="https://github.com/stellaraf/cacheutil/actions/workflows/quality.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/stellaraf/cacheutil/quality.yml?branch=main&color=%239100fa&event=push&style=for-the-badge" />
   </a>
   <br/>
   <br/>
 </div>
 
-`@stellaraf/cacheutil` provides a consistent caching API with support for multiple backends, in the event that a library requires a cache but could be used on multiple platforms with different caching systems available. For example, if one needed to use a library on both Cloudflare Workers and a standard NodeJS application.
+`@stellaraf/cacheutil` provides a consistent caching API with support for multiple backends in the event that a library requires a cache but could be used on multiple platforms with different caching systems available. For example, if one needed to use a library on both Cloudflare Workers and a standard NodeJS application.
 
 # Supported Backends
 
