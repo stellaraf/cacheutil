@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   quality:
     name: Quality
-    runs-on: ubuntu-latest
+    runs-on: codebuild-stellaraf-actions-public-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: supercharge/redis-github-action@1.4.0
         with:
