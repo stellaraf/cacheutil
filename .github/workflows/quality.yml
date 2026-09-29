@@ -4,15 +4,15 @@ on: [push, pull_request]
 jobs:
   quality:
     name: Quality
-    runs-on: codebuild-stellaraf-actions-public-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ubuntu-latest
     steps:
       - uses: supercharge/redis-github-action@1.4.0
         with:
           redis-version: 6
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 19
 
